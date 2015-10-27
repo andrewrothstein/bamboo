@@ -29,7 +29,9 @@ func RenderTemplate(templateName string, templateContent string, data interface{
 		"Join":       strings.Join,
 		"Replace":    strings.Replace,
 		"ToUpper":    strings.ToUpper,
-		"ToLower":    strings.ToLower}
+		"ToLower":    strings.ToLower,
+		"TrimPrefix": strings.TrimPrefix
+	}
 
 	tpl := template.Must(template.New(templateName).Funcs(funcMap).Parse(templateContent))
 
