@@ -30,7 +30,7 @@ func RenderTemplate(templateName string, templateContent string, data interface{
 		"Replace":    strings.Replace,
 		"ToUpper":    strings.ToUpper,
 		"ToLower":    strings.ToLower,
-		"TrimPrefix": strings.TrimPrefix
+		"TrimPrefix": strings.TrimPrefix,
 	}
 
 	tpl := template.Must(template.New(templateName).Funcs(funcMap).Parse(templateContent))
